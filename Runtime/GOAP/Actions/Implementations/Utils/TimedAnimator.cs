@@ -16,7 +16,7 @@ namespace Elysium.AI.GOAP
 
         public TimedAnimator()
         {
-            timer = Timer.CreateEmptyTimer();
+            timer = Timer.CreateScaledTimer();
             timer.ID = $"timed_animator";
             timer.OnEnd.AddListener(EndAnimation);
         }

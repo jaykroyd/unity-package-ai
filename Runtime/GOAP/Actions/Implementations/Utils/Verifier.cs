@@ -13,7 +13,7 @@ namespace Elysium.AI.GOAP
 
         public Verifier(string _id, TimeSpan _interval)
         {
-            timer = Timer.CreateTimer(_interval);
+            timer = Timer.CreateScaledTimer(_interval);
             timer.ID = _id;
             timer.OnEnd.AddListener(Verify);            
         }
